@@ -33,12 +33,14 @@ module.exports = function(app){
 			}
 		});
 
+		res.json(match);
+		friends.push(req.body);
+
 	});
 
 		// Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
 		// It will do this by sending out the value "true" have a table 
-		res.json(chosenMatch);
-		friends.push(req.body);
+		
 
 
 	};
