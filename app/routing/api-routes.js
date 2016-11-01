@@ -8,9 +8,11 @@ var path = require('path');
 module.exports = function(app){
 
 	// API GET Requests when pages are visited
-
+	console.log("a");
 	app.get('/api/theList', function(req, res){
+		console.log("b");
 		res.json(friends);
+		console.log("c");
 	});
 
 	// API POST Requests to server
@@ -19,11 +21,11 @@ module.exports = function(app){
 
 		var lowestDiff = 50;
 		var match;
-
+		console.log("d");
 		friends.forEach(function(data){
 			var difference = 0;
-
-			for(var i = 0; i < data.scores.length; i++){
+			console.log("e");
+			for (var i = 0; i < data.scores.length; i++){
 				difference += Math.abs(data.scores[i] - req.body.scores[i]);
 			} 
 
